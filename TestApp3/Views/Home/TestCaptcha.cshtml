@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "TestCaptcha";
+}
+
+<h2>TestCaptcha</h2>
+
+@using (Html.BeginForm("TestCaptcha", "home"))
+{
+
+    <p><img src="/home/ShowCaptchaImage" /></p>
+    <p>Please enter the string as shown above:</p>
+    <p>@Html.TextBox("CaptchaText")</p>
+    <p><input type="submit" value="Submit" /></p>
+}
+<strong>@ViewBag.Message</strong>
